@@ -294,7 +294,8 @@ void ZigbeeInitSerial(void)
   }
 
   if (PinUsed(GPIO_ZIGBEE_RX) && PinUsed(GPIO_ZIGBEE_TX)) {
-		AddLog(LOG_LEVEL_DEBUG_MORE, PSTR(D_LOG_ZIGBEE "GPIOs Rx:%d Tx:%d"), Pin(GPIO_ZIGBEE_RX), Pin(GPIO_ZIGBEE_TX));
+		AddLog(LOG_LEVEL_INFO, PSTR(D_LOG_ZIGBEE "GPIOs Rx:%d Tx:%d Rst:%d"),
+           Pin(GPIO_ZIGBEE_RX), Pin(GPIO_ZIGBEE_TX), Pin(GPIO_ZIGBEE_RST));
     // if TasmotaGlobal.seriallog_level is 0, we allow GPIO 13/15 to switch to Hardware Serial
     ZigbeeSerial = new TasmotaSerial(Pin(GPIO_ZIGBEE_RX), Pin(GPIO_ZIGBEE_TX), TasmotaGlobal.seriallog_level ? 1 : 2, 0, 256);   // set a receive buffer of 256 bytes
     ZigbeeSerial->begin(115200);

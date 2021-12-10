@@ -1892,15 +1892,15 @@ void ZCLFrame::syntheticAqaraCubeOrButton(class Z_attribute_list &attr_list, cla
 
     switch (val) {
       case 0:
-        attr_list.addAttribute(aqara_action).setStr(PSTR("hold"));            // deprecated
+//        attr_list.addAttribute(aqara_action).setStr(PSTR("hold"));            // deprecated
         attr_click.setStr(PSTR("hold"));
         break;
       case 1:
-        attr_list.addAttribute(aqara_click).setStr(PSTR("single"));            // deprecated
+//        attr_list.addAttribute(aqara_click).setStr(PSTR("single"));            // deprecated
         attr_click.setStr(PSTR("single"));
         break;
       case 2:
-        attr_list.addAttribute(aqara_click).setStr(PSTR("double"));            // deprecated
+//        attr_list.addAttribute(aqara_click).setStr(PSTR("double"));            // deprecated
         attr_click.setStr(PSTR("double"));
         break;
       case 3:
@@ -1910,19 +1910,19 @@ void ZCLFrame::syntheticAqaraCubeOrButton(class Z_attribute_list &attr_list, cla
         attr_click.setStr(PSTR("quadruple"));
         break;
       case 16:
-        attr_list.addAttribute(aqara_action).setStr(PSTR("hold"));            // deprecated
+//        attr_list.addAttribute(aqara_action).setStr(PSTR("hold"));            // deprecated
         attr_click.setStr(PSTR("hold"));
         break;
       case 17:
-        attr_list.addAttribute(aqara_action).setStr(PSTR("release"));            // deprecated
+//        attr_list.addAttribute(aqara_action).setStr(PSTR("release"));            // deprecated
         attr_click.setStr(PSTR("release"));
         break;
       case 18:
-        attr_list.addAttribute(aqara_action).setStr(PSTR("shake"));            // deprecated
+//        attr_list.addAttribute(aqara_action).setStr(PSTR("shake"));            // deprecated
         attr_click.setStr(PSTR("shake"));
         break;
       case 255:
-        attr_list.addAttribute(aqara_action).setStr(PSTR("release"));            // deprecated
+//        attr_list.addAttribute(aqara_action).setStr(PSTR("release"));            // deprecated
         attr_click.setStr(PSTR("release"));
         break;
       default:
